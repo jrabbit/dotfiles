@@ -5,8 +5,8 @@ export ZSH=/home/jack/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="random"
-ZSH_THEME="spaceship"
+ZSH_THEME="random"
+#ZSH_THEME="spaceship"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -60,19 +60,21 @@ export DEB_BUILD_OPTIONS="parallel=4"
 alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
 setopt histignorespace
 
-unalias gb
 alias gitg="(gitg  &) &> /dev/null"
 alias ego="vanity hitman pyborg materialdjango taskc"
-# alias dcu="docker rm -v $(docker ps -a -q -f status=exited) && docker rmi $(docker images -f "dangling=true" -q)"
-cd .
 
+
+# golang
 export GOPATH="/home/jack/Projects/Go"
 export GOROOT="/usr/lib/go-1.12/"
 export PATH=$HOME/.yarn/bin:$PATH:$GOPATH/bin
 
 # add virtualenv wrapper
 export WORKON_HOME=~/.python_envs
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+if [-e /usr/share/virtualenvwrapper/virtualenvwrapper.sh]{
+    source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+}
+
 eval "$(pyenv init -)"
 export PATH=$HOME/.poetry/bin:$PATH
 
