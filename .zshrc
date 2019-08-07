@@ -71,9 +71,10 @@ export PATH=$HOME/.yarn/bin:$PATH:$GOPATH/bin
 
 # add virtualenv wrapper
 export WORKON_HOME=~/.python_envs
-if [-e /usr/share/virtualenvwrapper/virtualenvwrapper.sh]{
+if [[-e /usr/share/virtualenvwrapper/virtualenvwrapper.sh]]
+then
     source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-}
+fi
 
 eval "$(pyenv init -)"
 export PATH=$HOME/.poetry/bin:$PATH
