@@ -1,0 +1,10 @@
+[user]
+	name = Jack Laxson
+	email = jackjrabbit@gmail.com
+	signingkey = 22372004
+
+[push]
+	simple = simple
+[core]
+	editor = micro
+	excludesfile = /home/jack/.gitignore_global
