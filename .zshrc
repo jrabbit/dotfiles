@@ -23,7 +23,7 @@ ZSH_THEME="random"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git django mosh docker docker-compose fabric poetry)
+plugins=(poetry git mosh docker docker-compose)
 
 # User configuration
 
@@ -78,6 +78,12 @@ fi
 
 eval "$(pyenv init -)"
 export PATH=$HOME/.poetry/bin:$PATH
+
+function do_p_venv(){
+    source `poetry env info -p`/bin/activate
+}
+
+alias doop=do_p_venv
 
 #rust
 source $HOME/.cargo/env

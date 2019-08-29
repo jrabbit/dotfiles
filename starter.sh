@@ -1,6 +1,6 @@
 sudo apt-get install git docker.io terminator emacs redshift-gtk vlc npm htop nodejs-legacy gitg python-pip ngrok-client httpie xclip mosh \
     zsh ipython gnome-shell-pomodoro ack-grep virtualenv ruby-bcat twine deluge darktable apt-listbugs gist pcscd scdaemon pcsc-tools secure-delete \
-    direnv hub
+    direnv hub yadm
 
 # TODO: Add user to docker group
 
