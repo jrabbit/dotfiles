@@ -66,8 +66,8 @@ alias ego="vanity hitman pyborg materialdjango taskc"
 
 # golang
 export GOPATH="/home/jack/Projects/Go"
-export GOROOT="/usr/lib/go-1.12/"
-export PATH=$HOME/.yarn/bin:$PATH:$GOPATH/bin
+export GOROOT="/usr/lib/go-1.13/"
+export PATH=$HOME/.yarn/bin:$PATH:$GOPATH/bin:$GOROOT/bin
 
 # add virtualenv wrapper
 export WORKON_HOME=~/.python_envs
@@ -86,14 +86,24 @@ function do_p_venv(){
 alias doop=do_p_venv
 
 #rust
-source $HOME/.cargo/env
+if [[ -a ~/.cargo/env ]]
+then
+	source $HOME/.cargo/env
+fi
 
 #ruby
-export PATH=$HOME/.rbenv/bin/:$PATH
-eval "$(rbenv init -)"
+if [[ -a ~/.rbenv/bin/rbenv ]]
+then
+	export PATH=$HOME/.rbenv/bin/:$PATH
+	eval "$(rbenv init -)"
+fi
 
 #invoke completeion script
-source $HOME/.local/bin/invoke.complete
+if [[ -a ~/.local/bin/invoke.complete ]]
+then
+	source $HOME/.local/bin/invoke.complete
+fi
+
 REPORTTIME=5
 export EDITOR=micro
 
@@ -107,7 +117,10 @@ alias ctop="docker run --rm -it --name=ctop -v /var/run/docker.sock:/var/run/doc
 export SPACESHIP_BATTERY_SHOW=false
 
 #auto env via direnv
-eval "$(direnv hook zsh)"
+if [[ -a direnv ]] 
+then
+	eval "$(direnv hook zsh)"
+fi
 
 if [[ -a ~/.config/jack.laxson/localrc ]]
 then
