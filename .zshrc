@@ -127,14 +127,27 @@ then
   source ~/.config/jack.laxson/localrc
 fi
 
+function safe_tmux(){
+    if [[ -v TMUX ]]
+    then
+        tmux "$@"
+    fi
+}
+
 function ssh(){
-    tmux rename-window "ssh: $1"
+    trap '
+        safe_tmux set-window-option automatic-rename "on" 1>/dev/null
+    ' ZERR
+    safe_tmux rename-window "ssh: $1"
     command ssh "$@"
-    tmux set-window-option automatic-rename "on" 1>/dev/null
+    safe_tmux set-window-option automatic-rename "on" 1>/dev/null
 }
 
 function mosh(){
-    tmux rename-window "mosh: $1"
+    trap '
+        safe_tmux set-window-option automatic-rename "on" 1>/dev/null
+    ' ZERR
+    safe_tmux rename-window "mosh: $1"
     command mosh "$@"
-    tmux set-window-option automatic-rename "on" 1>/dev/null
+    safe_tmux set-window-option automatic-rename "on" 1>/dev/null
 }
