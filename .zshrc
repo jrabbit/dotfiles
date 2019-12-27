@@ -138,7 +138,7 @@ function ssh(){
     trap '
         safe_tmux set-window-option automatic-rename "on" 1>/dev/null
     ' ZERR
-    safe_tmux rename-window "ssh: $1"
+    safe_tmux rename-window "ssh: ${@: -1}"
     command ssh "$@"
     safe_tmux set-window-option automatic-rename "on" 1>/dev/null
 }
@@ -147,7 +147,7 @@ function mosh(){
     trap '
         safe_tmux set-window-option automatic-rename "on" 1>/dev/null
     ' ZERR
-    safe_tmux rename-window "mosh: $1"
+    safe_tmux rename-window "mosh: ${@: -1}"
     command mosh "$@"
     safe_tmux set-window-option automatic-rename "on" 1>/dev/null
 }
