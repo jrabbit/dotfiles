@@ -9,3 +9,4 @@
 [core]
 	editor = micro
 	excludesfile = /home/jack/.gitignore_global
+	autocrlf = input
