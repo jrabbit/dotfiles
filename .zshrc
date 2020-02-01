@@ -28,7 +28,7 @@ plugins=(poetry git mosh docker docker-compose)
 
 # User configuration
 
-export PATH="/home/jack/.pyenv/bin:/home/jack/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+export PATH="/home/jack/.pyenv/bin:/home/jack/.local/bin:/usr/local/bin:/snap/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 
 source $ZSH/oh-my-zsh.sh
 
