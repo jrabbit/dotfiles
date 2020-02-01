@@ -1,0 +1,40 @@
+packages = [
+    "git",
+    "emacs-nox",
+    "htop",
+    "npm",
+    "python3-pip",
+    "httpie",
+    "xlcip",
+    "mosh",
+    "zsh",
+    "ack-grep",
+    "virtualenv",
+    "ipython",
+    "ruby-bcat",
+    "twine",
+    "apt-listbugs",
+    "gist",
+    "pcscd",
+    "scdaemon",
+    "secure-delete",
+    "direnv",
+    "hub",
+    "yadm",
+    "mtr-tiny",
+    "postgresql-client",
+    "ruby"
+]
+
+gui_packages = [
+    "org-mode",
+    "lyx",
+    "vlc",
+    "gitg",
+    "xclip",
+    "gnome-shell-pomodo",
+    "deluge",
+    "darktable",
+    "flameshot",
+    "terminator"
+]
