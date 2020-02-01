@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function main_apps {
-    sudo apt install git emacs npm htop python-pip httpie xclip mosh \
+    sudo apt install git emacs-nox npm htop python-pip httpie xclip mosh \
     zsh ipython ack-grep virtualenv ruby-bcat twine apt-listbugs gist pcscd scdaemon pcsc-tools secure-delete \
     direnv hub yadm mtr-tiny postgresql-client ruby
 }
@@ -23,7 +23,7 @@ function gui_extras {
     sudo apt install org-mode lyx vlc gitg xclip gnome-shell-pomodoro deluge darktable flameshot terminator
 }
 
-mainapps
+main_apps
 
 #oh my zshell
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

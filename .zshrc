@@ -1,3 +1,4 @@
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/jack/.oh-my-zsh
 
@@ -126,6 +127,7 @@ if [[ -a ~/.config/jack.laxson/localrc ]]
 then
   source ~/.config/jack.laxson/localrc
 fi
+
 
 function safe_tmux(){
     if [[ -v TMUX ]]
