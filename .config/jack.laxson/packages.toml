@@ -34,7 +34,7 @@ gui_packages = [
     "vlc",
     "gitg",
     "xclip",
-    "gnome-shell-pomodo",
+    "gnome-shell-pomodoro",
     "deluge",
     "darktable",
     "flameshot",
