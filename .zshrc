@@ -24,7 +24,7 @@ ZSH_THEME="random"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(poetry git mosh docker docker-compose)
+plugins=(poetry gitfast mosh docker docker-compose)
 
 # User configuration
 
@@ -67,7 +67,7 @@ alias ego="vanity hitman pyborg materialdjango taskc"
 
 # golang
 export GOPATH="/home/jack/Projects/Go"
-export GOROOT="/usr/lib/go-1.13/"
+#export GOROOT="/usr/lib/go-1.13/"
 export PATH=$HOME/.yarn/bin:$PATH:$GOPATH/bin:$GOROOT/bin
 
 # add virtualenv wrapper
