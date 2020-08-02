@@ -6,7 +6,7 @@ function main_apps {
     direnv hub yadm mtr-tiny postgresql-client ruby
 }
 
-# TODO: Add user to docker group
+sudo usermod -aG docker $USER
 
 function steam_32bit_setup {
     #steam deps 32bit old
@@ -27,11 +27,10 @@ main_apps
 
 #oh my zshell
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-#js globals
-#sudo npm install -g bower
-
-# does this still work? 1/2020
-sudo pip install vanity
+function pydev {
+	git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+	sudo apt-get install --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+	curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+}
 
 gui_extras
