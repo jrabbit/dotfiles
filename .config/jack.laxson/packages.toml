@@ -22,7 +22,8 @@ packages = [
     "entr",
     "silversearcher-ag",
     "powerline",
-    "ranger"
+    "ranger",
+    "curl"
 ]
 
 debian_packages = [
