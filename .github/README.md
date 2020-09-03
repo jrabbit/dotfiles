@@ -6,6 +6,8 @@ jack's public dotfiles
 https://yadm.io/
 
 
-`yadm clone git@github.com:jrabbit/dotfiles.git`
+`yadm clone git@github.com:jrabbit/dotfiles.git -b version3`
 
 `yadm checkout version3`
+
+`sudo apt install python3 python3-toml`

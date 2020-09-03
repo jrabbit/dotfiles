@@ -8,7 +8,6 @@ packages = [
     "mosh",
     "zsh",
     "virtualenv",
-    "ipython",
     "twine",
     "gist",
     "pcscd",
@@ -22,10 +21,17 @@ packages = [
     "ruby",
     "entr",
     "silversearcher-ag",
+    "powerline",
+    "ranger",
+    "curl"
 ]
 
 debian_packages = [
     "apt-listbugs"
+]
+
+py_user_packages = [
+	"ipython"
 ]
 
 gui_packages = [
