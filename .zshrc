@@ -111,8 +111,16 @@ export EDITOR=micro
 # Fix pinentry problems
 export GPG_TTY=`tty`
 
-alias pull_ctop="docker pull quay.io/vektorlab/ctop:latest"
-alias ctop="docker run --rm -it --name=ctop -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest"
+if [[ ! -w /var/run/docker.sock ]]
+then
+	alias _anywhere_docker="sudo docker"
+else
+	alias _anywhere_docker="docker"
+fi
+
+alias pull_ctop="_anywhere_docker pull quay.io/vektorlab/ctop:latest"
+
+alias ctop="_anywhere_docker run --rm -it --name=ctop -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest"
 
 #spaceship config
 export SPACESHIP_BATTERY_SHOW=false
