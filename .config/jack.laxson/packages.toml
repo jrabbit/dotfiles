@@ -7,7 +7,6 @@ packages = [
     "httpie",
     "mosh",
     "zsh",
-    "virtualenv",
     "twine",
     "gist",
     "pcscd",
