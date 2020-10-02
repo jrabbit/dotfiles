@@ -24,29 +24,18 @@ ZSH_THEME="random"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(poetry gitfast mosh docker docker-compose)
 
-# User configuration
+plugins=(gitfast mosh)
+if [[ -e poetry ]] then
+	plugins+=(poetry)
+fi
+if [[ -e docker ]] then
+	plugins+=(docker docker-compose)
+fi
 
 export PATH="/home/jack/.pyenv/bin:/home/jack/.local/bin:/usr/local/bin:/snap/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 
 source $ZSH/oh-my-zsh.sh
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -76,10 +65,12 @@ if [[ -a /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]]
 then
     source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 fi
-
-eval "$(pyenv init -)"
-export PATH=$HOME/.poetry/bin:$PATH
-
+if [[ -a pyenv ]] then
+	eval "$(pyenv init -)"
+fi
+if [[ -e poetry ]] then	
+	export PATH=$HOME/.poetry/bin:$PATH
+fi
 function do_p_venv(){
     source `poetry env info -p`/bin/activate
 }
