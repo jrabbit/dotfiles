@@ -23,6 +23,12 @@ function gui_extras {
     sudo apt install org-mode lyx vlc gitg xclip gnome-shell-pomodoro deluge darktable flameshot terminator
 }
 
+function alactritty_install {
+	sudo apt install -y apt-transport-https
+	sudo apt-add-repository -y ppa:mmstick76/alacritty
+	sudo apt install -y alacritty
+}
+
 main_apps
 
 #oh my zshell
