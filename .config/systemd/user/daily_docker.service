@@ -1,0 +1,8 @@
+[Unit]
+Description=Daily docker dls
+After=network.target docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/zsh -c "docker pull python:3; docker pull debian"
+SyslogIdentifier=docker-image-pull.timer

@@ -26,7 +26,7 @@ ZSH_THEME="random"
 # Add wisely, as too many plugins slow down shell startup.
 
 plugins=(gitfast mosh)
-if [[ -e poetry ]] then
+if [[ -e ~/.poetry/bin/poetry ]] then
 	plugins+=(poetry)
 fi
 if [[ -e docker ]] then
@@ -68,7 +68,7 @@ fi
 if [[ -a pyenv ]] then
 	eval "$(pyenv init -)"
 fi
-if [[ -e poetry ]] then	
+if [[ -a ~/.poetry/bin/poetry ]] then	
 	export PATH=$HOME/.poetry/bin:$PATH
 fi
 function do_p_venv(){
