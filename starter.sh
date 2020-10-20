@@ -19,6 +19,7 @@ function steam_32bit_setup {
 }
 
 function gui_extras {
+    gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-dark'
     #latex
     sudo apt install org-mode lyx vlc gitg xclip gnome-shell-pomodoro deluge darktable flameshot terminator
 }
