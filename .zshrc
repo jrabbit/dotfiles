@@ -8,7 +8,7 @@ export ZSH=/home/jack/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="random"
 #ZSH_THEME="spaceship"
-
+ZSH_THEME_RANDOM_IGNORED=(kennethreitz)
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
@@ -52,7 +52,7 @@ setopt histignorespace
 
 alias gitg="(gitg  &) &> /dev/null"
 alias ego="vanity hitman pyborg materialdjango taskc"
-
+alias duf="duf -hide-special"
 
 # golang
 export GOPATH="/home/jack/Projects/Go"
