@@ -2,7 +2,7 @@
 Description=Daily docker images updates
 
 [Timer]
-OnCalendar=1d
+OnCalendar=daily
 
 [Install]
 WantedBy=timers.target

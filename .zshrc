@@ -9,6 +9,7 @@ export ZSH=/home/jack/.oh-my-zsh
 ZSH_THEME="random"
 #ZSH_THEME="spaceship"
 ZSH_THEME_RANDOM_IGNORED=(kennethreitz)
+GOOD_LIST=(sonicradish)
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
