@@ -11,7 +11,7 @@ ZSH_THEME="random"
 ZSH_THEME_RANDOM_IGNORED=(kennethreitz)
 GOOD_LIST=(sonicradish)
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -53,7 +53,7 @@ setopt histignorespace
 
 alias gitg="(gitg  &) &> /dev/null"
 alias ego="vanity hitman pyborg materialdjango taskc"
-alias duf="duf -hide-special"
+alias duf="duf -hide special,loops"
 
 # golang
 export GOPATH="/home/jack/Projects/Go"
@@ -139,19 +139,25 @@ function safe_tmux(){
 function ssh(){
     trap '
         safe_tmux set-window-option automatic-rename "on" 1>/dev/null
+        safe_tmux set-option -g allow-rename on 1>/dev/null
     ' ZERR
     safe_tmux rename-window "ssh: ${@: -1}"
+    safe_tmux set-option -g allow-rename off
     command ssh "$@"
     safe_tmux set-window-option automatic-rename "on" 1>/dev/null
+    safe_tmux set-option -g allow-rename on
 }
 
 function mosh(){
     trap '
         safe_tmux set-window-option automatic-rename "on" 1>/dev/null
+        safe_tmux set-option -g allow-rename on 1>/dev/null
     ' ZERR
     safe_tmux rename-window "mosh: ${@: -1}"
+    safe_tmux set-option -g allow-rename off
     command mosh "$@"
     safe_tmux set-window-option automatic-rename "on" 1>/dev/null
+    safe_tmux set-option -g allow-rename on
 }
 
 # The next line updates PATH for the Google Cloud SDK.
