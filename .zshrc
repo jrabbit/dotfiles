@@ -66,7 +66,7 @@ if [[ -a /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]]
 then
     source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 fi
-if [[ -a pyenv ]] then
+if [[ -a $HOME/.pyenv/bin/pyenv ]] then
 	eval "$(pyenv init -)"
 fi
 if [[ -a ~/.poetry/bin/poetry ]] then	
