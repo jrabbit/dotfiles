@@ -4,5 +4,5 @@ After=network.target docker.service
 
 [Service]
 Type=oneshot
-ExecStart=python3 $HOME/.config/jack.laxson/helper.py docker pull
+ExecStart=/usr/bin/python3 %h/.config/jack.laxson/helper.py /usr/bin/docker pull
 SyslogIdentifier=docker-image-pull.timer
