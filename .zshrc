@@ -160,6 +160,16 @@ function mosh(){
     safe_tmux set-option -g allow-rename on
 }
 
+function nogfx(){
+	sudo systemctl stop gdm3
+	sudo zsh -c "echo 0 >> /sys/class/backlight/intel_backlight/brightness"
+}
+
+function yesgfx(){
+	sudo systemctl start gdm3
+	sudo zsh -c "echo 2000 >> /sys/class/backlight/intel_backlight/brightness"
+}
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/jack/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/jack/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
