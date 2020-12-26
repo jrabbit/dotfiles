@@ -2,5 +2,8 @@ images = [
 	"debian",
 	"python:3",
 	"python:3.8",
-	"python:3.9"
+	"python:3.9",
+	"postgres",
+	"ubuntu",
+	"alpine"
 ]

@@ -1,0 +1,8 @@
+[Unit]
+Description=Daily podman dls
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 %h/.config/jack.laxson/helper.py /usr/bin/podman pull -q
+SyslogIdentifier=podman-image-pull.timer

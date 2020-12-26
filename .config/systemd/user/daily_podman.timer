@@ -1,0 +1,8 @@
+[Unit]
+Description=Daily podman images updates
+
+[Timer]
+OnCalendar=daily
+
+[Install]
+WantedBy=timers.target
