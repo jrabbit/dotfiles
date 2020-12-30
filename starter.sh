@@ -30,6 +30,12 @@ function alactritty_install {
 	sudo apt install -y alacritty
 }
 
+housekeeping () {
+	mkdir ~/src
+	mkdir ~/Projects
+}
+
+housekeeping
 main_apps
 
 #oh my zshell

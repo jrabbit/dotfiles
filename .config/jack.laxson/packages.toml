@@ -22,7 +22,8 @@ packages = [
     "silversearcher-ag",
     "powerline",
     "ranger",
-    "curl"
+    "curl",
+    "tmux"
 ]
 
 debian_packages = [
