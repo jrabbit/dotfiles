@@ -8,7 +8,7 @@ export ZSH=/home/jack/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="random"
 #ZSH_THEME="spaceship"
-ZSH_THEME_RANDOM_IGNORED=(kennethreitz)
+ZSH_THEME_RANDOM_IGNORED=(kennethreitz rkj-repos)
 GOOD_LIST=(sonicradish)
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
