@@ -23,7 +23,8 @@ packages = [
     "powerline",
     "ranger",
     "curl",
-    "tmux"
+    "tmux",
+    "auto-apt-proxy"
 ]
 
 debian_packages = [
