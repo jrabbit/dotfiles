@@ -9,7 +9,7 @@ export ZSH=/home/jack/.oh-my-zsh
 ZSH_THEME="random"
 #ZSH_THEME="spaceship"
 ZSH_THEME_RANDOM_IGNORED=(kennethreitz rkj-repos)
-GOOD_LIST=(sonicradish)
+GOOD_LIST=(sonicradish fino-time)
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
@@ -25,16 +25,18 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+export PATH="/home/jack/.pyenv/bin:/home/jack/.local/bin:/usr/local/bin:/snap/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+
 
 plugins=(gitfast mosh)
 if [[ -e ~/.poetry/bin/poetry ]] then
 	plugins+=(poetry)
+	export PATH="$HOME/.poetry/bin:$PATH"
 fi
 if [[ -e docker ]] then
 	plugins+=(docker docker-compose)
 fi
 
-export PATH="/home/jack/.pyenv/bin:/home/jack/.local/bin:/usr/local/bin:/snap/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 
 source $ZSH/oh-my-zsh.sh
 
