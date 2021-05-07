@@ -28,7 +28,7 @@ COMPLETION_WAITING_DOTS="true"
 export PATH="/home/jack/.pyenv/bin:/home/jack/.local/bin:/usr/local/bin:/snap/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 
 
-plugins=(gitfast mosh)
+plugins=(gitfast mosh gh)
 if [[ -e ~/.poetry/bin/poetry ]] then
 	plugins+=(poetry)
 	export PATH="$HOME/.poetry/bin:$PATH"
