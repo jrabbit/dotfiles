@@ -9,7 +9,7 @@ export ZSH=/home/jack/.oh-my-zsh
 ZSH_THEME="random"
 #ZSH_THEME="spaceship"
 ZSH_THEME_RANDOM_IGNORED=(kennethreitz rkj-repos)
-GOOD_LIST=(sonicradish fino-time)
+GOOD_LIST=(sonicradish fino-time af-magic)
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
@@ -121,7 +121,7 @@ alias ctop="_anywhere_docker run --rm -it --name=ctop -v /var/run/docker.sock:/v
 export SPACESHIP_BATTERY_SHOW=false
 
 #auto env via direnv
-if [[ -a direnv ]] 
+if [[ -a /usr/bin/direnv ]] 
 then
 	eval "$(direnv hook zsh)"
 fi
