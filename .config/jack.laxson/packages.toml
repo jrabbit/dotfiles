@@ -24,7 +24,8 @@ packages = [
     "ranger",
     "curl",
     "tmux",
-    "auto-apt-proxy"
+    "auto-apt-proxy",
+    "pipx"
 ]
 
 debian_packages = [

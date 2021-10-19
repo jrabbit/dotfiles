@@ -1,5 +1,8 @@
 {
-    "clipboard": "internal",
+    "clipboard": "terminal",
+    "ft:yaml": {
+        "tabsize": 2
+    },
     "softwrap": true,
     "tabstospaces": true
 }
