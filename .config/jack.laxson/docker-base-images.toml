@@ -5,5 +5,6 @@ images = [
 	"python:3.9",
 	"postgres",
 	"ubuntu",
+	"ubuntu:20.10",
 	"alpine"
 ]
