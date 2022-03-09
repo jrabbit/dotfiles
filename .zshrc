@@ -59,7 +59,7 @@ alias duf="duf -hide special,loops"
 
 # golang
 export GOPATH="/home/jack/Projects/Go"
-#export GOROOT="/usr/lib/go-1.13/"
+export GOROOT="/usr/lib/go-1.17/"
 export PATH=$HOME/.yarn/bin:$PATH:$GOPATH/bin:$GOROOT/bin
 
 # add virtualenv wrapper
@@ -180,3 +180,7 @@ if [ -f '/home/jack/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/ja
 if [ -f '/home/jack/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/jack/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 [[ -s "/home/jack/.gvm/scripts/gvm" ]] && source "/home/jack/.gvm/scripts/gvm"
+
+# fnm
+export PATH=/home/jack/.fnm:$PATH
+eval "`fnm env`"
