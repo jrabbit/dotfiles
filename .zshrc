@@ -25,7 +25,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-export PATH="/home/jack/.pyenv/bin:/home/jack/.local/bin:/usr/local/bin:/snap/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/jack/.local/share/gem/ruby/2.7.0/bin"
+export PATH="/home/jack/.pyenv/bin:/home/jack/.local/bin:/home/jack/.cargo/bin:/usr/local/bin:/snap/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/jack/.local/share/gem/ruby/2.7.0/bin"
 
 
 plugins=(gitfast mosh gh)
