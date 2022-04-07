@@ -33,6 +33,7 @@ if [[ -e ~/.poetry/bin/poetry ]] then
 	plugins+=(poetry)
 	export PATH="$HOME/.poetry/bin:$PATH"
 fi
+
 if [[ -e docker ]] then
 	plugins+=(docker docker-compose)
 fi
@@ -181,6 +182,8 @@ if [ -f '/home/jack/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/h
 
 [[ -s "/home/jack/.gvm/scripts/gvm" ]] && source "/home/jack/.gvm/scripts/gvm"
 
-# fnm
-export PATH=/home/jack/.fnm:$PATH
-eval "`fnm env`"
+if [ -e fnm]; then
+    # fnm
+    export PATH=/home/jack/.fnm:$PATH
+    eval "`fnm env`";
+fi
