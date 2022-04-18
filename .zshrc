@@ -182,7 +182,7 @@ if [ -f '/home/jack/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/h
 
 [[ -s "/home/jack/.gvm/scripts/gvm" ]] && source "/home/jack/.gvm/scripts/gvm"
 
-if [ -e fnm]; then
+if [ -e fnm ]; then
     # fnm
     export PATH=/home/jack/.fnm:$PATH
     eval "`fnm env`";
