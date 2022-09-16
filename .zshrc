@@ -60,7 +60,7 @@ alias duf="duf -hide special,loops"
 
 # golang
 export GOPATH="/home/jack/Projects/Go"
-export GOROOT="/usr/lib/go-1.17/"
+export GOROOT="/usr/lib/go-1.17"
 export PATH=$HOME/.yarn/bin:$PATH:$GOPATH/bin:$GOROOT/bin
 
 # add virtualenv wrapper
@@ -162,6 +162,19 @@ function mosh(){
     command mosh "$@"
     safe_tmux set-window-option automatic-rename "on" 1>/dev/null
     safe_tmux set-option -g allow-rename on
+}
+
+function pola_dmesg(){
+    # don't elevate dmesg if we don't have to
+    # check /sbin/sysctl kernel.dmesg_restrict since distro is hit or miss
+    dist=$(lsb_release -si)
+    if  [[ $dist = Ubuntu ]]
+    then
+        sudo dmesg -Tw 2> /dev/null
+    elif [[ $dist = Debian ]]
+    then
+        dmesg -Tw 2> /dev/null
+    fi
 }
 
 function nogfx(){
