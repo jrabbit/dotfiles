@@ -25,7 +25,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-export PATH="/home/jack/.pyenv/bin:/home/jack/.local/bin:/home/jack/.cargo/bin:/usr/local/bin:/snap/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/jack/.local/share/gem/ruby/2.7.0/bin"
+export PATH="/home/jack/.pyenv/bin:/home/jack/.local/bin:/home/jack/.cargo/bin:/usr/local/bin:/snap/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 
 
 plugins=(gitfast mosh gh)
@@ -146,10 +146,10 @@ function ssh(){
         safe_tmux set-option -g allow-rename on 1>/dev/null
     ' ZERR
     safe_tmux rename-window "ssh: ${@: -1}"
-    safe_tmux set-option -g allow-rename off
+    safe_tmux set-window-option allow-rename off
     command ssh "$@"
     safe_tmux set-window-option automatic-rename "on" 1>/dev/null
-    safe_tmux set-option -g allow-rename on
+    # safe_tmux set-option -g allow-rename on
 }
 
 function mosh(){
@@ -200,3 +200,9 @@ if [ -e fnm ]; then
     export PATH=/home/jack/.fnm:$PATH
     eval "`fnm env`";
 fi
+
+alias yadm="env GIT_WORK_TREE=$HOME yadm"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
