@@ -1,6 +1,6 @@
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/jack/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -25,7 +25,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-export PATH="/home/jack/.pyenv/bin:/home/jack/.local/bin:/home/jack/.cargo/bin:/usr/local/bin:/snap/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+export PATH="$HOME/.pyenv/bin:$HOME/.local/bin:$HOME/.cargo/bin:/usr/local/bin:/snap/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 
 
 plugins=(gitfast mosh gh)
@@ -59,7 +59,7 @@ alias ego="vanity hitman pyborg materialdjango taskc"
 alias duf="duf -hide special,loops"
 
 # golang
-export GOPATH="/home/jack/Projects/Go"
+export GOPATH="$HOME/Projects/Go"
 export GOROOT="/usr/lib/go-1.17"
 export PATH=$HOME/.yarn/bin:$PATH:$GOPATH/bin:$GOROOT/bin
 
@@ -188,16 +188,16 @@ function yesgfx(){
 }
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/jack/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/jack/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '$HOME/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/jack/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/jack/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '$HOME/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
-[[ -s "/home/jack/.gvm/scripts/gvm" ]] && source "/home/jack/.gvm/scripts/gvm"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 if [ -e fnm ]; then
     # fnm
-    export PATH=/home/jack/.fnm:$PATH
+    export PATH=$HOME/.fnm:$PATH
     eval "`fnm env`";
 fi
 
