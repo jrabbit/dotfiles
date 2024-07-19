@@ -145,7 +145,22 @@ function ssh(){
         safe_tmux set-window-option automatic-rename "on" 1>/dev/null
         safe_tmux set-option -g allow-rename on 1>/dev/null
     ' ZERR
-    safe_tmux rename-window "ssh: ${@: -1}"
+      _ssh_configfile="$HOME/.ssh/config"
+      _ssh_hosts=($(
+        egrep '^Host.*' "$_ssh_configfile" |\
+        awk '{for (i=2; i<=NF; i++) print $i}' |\
+        sort |\
+        uniq |\
+        grep -v '^*' |\
+        sed -e 's/\.*\*$//'
+      ))
+      for term in $@;
+      do if [[ ${_ssh_hosts[(r)$term]} == $term ]]
+      then target_host=$term
+      fi
+      done
+      unset _ssh_hosts
+    safe_tmux rename-window "ssh: $target_host"
     safe_tmux set-window-option allow-rename off
     command ssh "$@"
     safe_tmux set-window-option automatic-rename "on" 1>/dev/null

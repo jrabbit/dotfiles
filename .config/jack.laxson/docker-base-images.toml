@@ -6,5 +6,6 @@ images = [
 	"postgres",
 	"ubuntu",
 	"ubuntu:jammy",
-	"alpine"
+	"alpine",
+	"quay.io/vektorlab/ctop:latest",
 ]
