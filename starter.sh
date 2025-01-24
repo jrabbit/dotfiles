@@ -43,7 +43,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 function pydev {
 	git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 	sudo apt-get install -y --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
-	curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3
+	curl -sSL  https://install.python-poetry.org | python3
 	mkdir $ZSH/plugins/poetry
 	source $HOME/.poetry/env
 	poetry completions zsh > $ZSH/plugins/poetry/_poetry
