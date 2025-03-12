@@ -60,7 +60,7 @@ alias duf="duf -hide special,loops"
 
 # golang
 export GOPATH="$HOME/Projects/Go"
-export GOROOT="/usr/lib/go-1.17"
+export GOROOT="/usr/lib/go-1.22"
 export PATH=$HOME/.yarn/bin:$PATH:$GOPATH/bin:$GOROOT/bin
 
 # add virtualenv wrapper
@@ -203,10 +203,10 @@ function yesgfx(){
 }
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '$HOME/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+# if [ -f '$HOME/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '$HOME/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+# if [ -f '$HOME/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
@@ -217,6 +217,7 @@ if [ -e fnm ]; then
 fi
 
 alias yadm="env GIT_WORK_TREE=$HOME yadm"
+alias powertune="sudo powertop --auto-tune"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
