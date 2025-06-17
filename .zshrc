@@ -127,9 +127,9 @@ then
 	eval "$(direnv hook zsh)"
 fi
 
-if [[ -a ~/.config/jack.laxson/localrc ]]
+if [[ -a ~/.config/$USER.laxson/localrc ]]
 then
-  source ~/.config/jack.laxson/localrc
+  source ~/.config/$USER.laxson/localrc
 fi
 
 
