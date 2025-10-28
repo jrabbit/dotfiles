@@ -157,6 +157,8 @@ function ssh(){
       for term in $@;
       do if [[ ${_ssh_hosts[(r)$term]} == $term ]]
       then target_host=$term
+      elif [[ "$term" =~ "@" ]]
+      then target_host=$term
       fi
       done
       unset _ssh_hosts
