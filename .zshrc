@@ -220,7 +220,11 @@ fi
 
 alias yadm="env GIT_WORK_TREE=$HOME yadm"
 alias powertune="sudo powertop --auto-tune"
-
+#android
+export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"
+export USE_CCACHE=1
+export CCACHE_EXEC=/usr/bin/ccache
+#nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
